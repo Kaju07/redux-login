@@ -1,8 +1,11 @@
 import React from 'react';
+import LoginForm from '../forms/LoginForm'
 
 const LoginPage = () => (
     <div>
-        <h1>Login succesful</h1>
+        <h1>Login</h1>
+
+        <LoginForm />
     </div>
 );
 
