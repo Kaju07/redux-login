@@ -25,7 +25,7 @@ class LoginForm extends React.Component {
 
     // TO DO: show errors if any
     validate = (data) => {
-        const errors = {};
+        const errors = {}
         if (!Validator.isEmail(data.email)) errors.email = "Invalid email";
         if ((!data.password) || (data.password.length < 8))
             errors.password = "Password must be at least 8 characters long";
@@ -33,7 +33,7 @@ class LoginForm extends React.Component {
     }
 
     render() {
-        const { data } = this.state;
+        const { data, errors } = this.state;
         return (
             <Form onSubmit={this.onSubmit}>
                 <Form.Field>
@@ -45,7 +45,11 @@ class LoginForm extends React.Component {
                         placeholder="youremail@here.com"
                         value={data.email}
                         onChange={this.onChange}
-                    />   
+                    />
+                    <span style={{ color: "#ae5856" }}>
+                        {errors.email}
+                    </span>  
+                        
                 </Form.Field>
                 <Form.Field>
                     <label htmlFor="password">Password</label>
@@ -57,6 +61,9 @@ class LoginForm extends React.Component {
                         value={data.password}
                         onChange={this.onChange}
                     />
+                    <span style={{ color: "#ae5856" }}>
+                        {errors.password}
+                    </span>
                 </Form.Field>
                 <Button primary>Login</Button>
             </Form>
