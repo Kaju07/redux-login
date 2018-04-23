@@ -1,15 +1,29 @@
 import React from "react";
+import PropTypes from "prop-types";
+import { connect } from "react-redux";
 
-class DashboardPage extends React.Component {
-  state = {};
+const DashboardPage = ({ isAuthenticated, userEmail }) => (
+  <div>
+    <div>
+      <h1>Dashboard</h1>
+    </div>
+    <div>Hello {userEmail} </div>
+  </div>
+);
 
-  render() {
-    return (
-      <div>
-        <h1>Dashboard</h1>
-      </div>
-    );
+DashboardPage.propTypes = {
+  isAuthenticated: PropTypes.bool.isRequired
+};
+
+const mapStateToProps = state => {
+  if (!!state.userReducer.user) {
+    return {
+      isAuthenticated: !!state.userReducer.user.token,
+      userEmail: state.userReducer.user.email
+    };
+  } else {
+    return { isAuthenticated: false, userEmail: "" };
   }
-}
+};
 
-export default DashboardPage;
+export default connect(mapStateToProps)(DashboardPage);
