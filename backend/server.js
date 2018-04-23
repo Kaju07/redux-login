@@ -30,14 +30,21 @@ const query = user => {
         u => u.email === user.email && u.password === user.password
       )
     ) {
-      let response = { success: true, errorMessage: null };
+      let response = {
+        success: true,
+        email: user.email,
+        token: "thisisatoken",
+        errorMessage: null
+      }; //add token
       resolve(response);
     } else {
       //let err = new Error("Wrong username/password");
       let response = {
         success: false,
+        email: user.email,
+        token: null,
         errorMessage: "Wrong username/password"
-      };
+      }; //add token
       reject(response);
     }
   });
@@ -51,7 +58,7 @@ app.post("/api/login", (req, res) => {
       setTimeout(() => res.json(outcome), timer);
     })
     .catch(error => {
-      setTimeout(() => res.json(error), timer);
+      setTimeout(() => res.json(error), timer); // res.status(400).json(error)
     });
 });
 

@@ -1,20 +1,22 @@
-import { USER_LOGIN_SUCCESS } from "../types";
-import { USER_LOGIN_FAIL } from "../types";
+import { USER_LOGGING_IN } from "../types";
+import { USER_LOGGING_OUT } from "../types";
+import { USER_LOGGED_IN } from "../types";
+import { USER_NOT_LOGGED_IN } from "../types";
 import api from "../api";
 
-export const userLoginSuccess = data => ({
-  type: USER_LOGIN_SUCCESS,
-  data
-});
+export const userLoggingIn = () => ({ type: USER_LOGGING_IN });
+export const userLoggingOut = () => ({ type: USER_LOGGING_OUT });
+export const userLoginSuccess = payload => ({ type: USER_LOGGED_IN, payload });
+export const userLoginFail = () => ({ type: USER_NOT_LOGGED_IN });
 
-export const userLoginFail = data => ({
-  type: USER_LOGIN_FAIL,
-  data
-});
+export const login = credentials => dispatch => {
+  dispatch(userLoggingIn());
 
-export const login = credentials => dispatch =>
-  api.user.login(credentials).then(data => {
+  return api.user.login(credentials).then(data => {
     data.success
-      ? dispatch(userLoginSuccess(data))
-      : dispatch(userLoginFail(data));
+      ? dispatch(
+          userLoginSuccess({ user: { email: data.email, token: data.token } })
+        )
+      : dispatch(userLoginFail());
   });
+};
