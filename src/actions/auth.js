@@ -20,3 +20,7 @@ export const login = credentials => dispatch => {
       : dispatch(userLoginFail());
   });
 };
+
+export const logout = () => dispatch => {
+  //dispatch (userLoggingOut());
+};
