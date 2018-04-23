@@ -6,10 +6,7 @@ import { login } from "../../actions/auth";
 
 class LoginPage extends React.Component {
   submit = data =>
-    this.props.login(data).then(() => {
-      console.log("do something after login");
-      //this.props.history.push("/");
-    });
+    this.props.login(data).then(() => this.props.history.push("/dashboard"));
 
   render() {
     return (
