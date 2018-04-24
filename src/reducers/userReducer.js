@@ -1,7 +1,9 @@
-import { USER_LOGGING_IN } from "../types";
-import { USER_LOGGING_OUT } from "../types";
-import { USER_LOGGED_IN } from "../types";
-import { USER_NOT_LOGGED_IN } from "../types";
+import {
+  USER_LOGGING_IN,
+  USER_LOGGING_OUT,
+  USER_LOGGED_IN,
+  USER_NOT_LOGGED_IN
+} from "../types";
 
 export default function userReducer(state = {}, action = {}) {
   switch (action.type) {
