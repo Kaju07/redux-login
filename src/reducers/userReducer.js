@@ -3,12 +3,7 @@ import { USER_LOGGING_OUT } from "../types";
 import { USER_LOGGED_IN } from "../types";
 import { USER_NOT_LOGGED_IN } from "../types";
 
-const initialState = {
-  stateName: USER_NOT_LOGGED_IN,
-  isFetching: false
-};
-
-export default function userReducer(state = initialState, action = {}) {
+export default function userReducer(state = {}, action = {}) {
   switch (action.type) {
     case USER_LOGGING_IN:
       return Object.assign(

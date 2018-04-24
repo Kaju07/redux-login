@@ -9,7 +9,7 @@ import { composeWithDevTools } from "redux-devtools-extension";
 import App from "./App";
 import registerServiceWorker from "./registerServiceWorker";
 import rootReducer from "./rootReducer";
-import { userLoginSuccess } from "./actions/auth";
+import { userLoginSuccess, userLoginFail } from "./actions/auth";
 
 const store = createStore(
   rootReducer,
@@ -23,6 +23,8 @@ if (localStorage.testToken && localStorage.testEmail) {
       token: localStorage.testToken
     })
   );
+} else {
+  store.dispatch(userLoginFail());
 }
 
 ReactDOM.render(
