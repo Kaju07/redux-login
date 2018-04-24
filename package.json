@@ -5,6 +5,7 @@
   "dependencies": {
     "axios": "^0.18.0",
     "body-parser": "^1.18.2",
+    "npm": "^6.0.0",
     "prop-types": "^15.6.1",
     "react": "^16.3.1",
     "react-dom": "^16.3.1",
@@ -25,8 +26,7 @@
     "test": "react-scripts test --env=jsdom",
     "eject": "react-scripts eject",
     "lint": "eslint src",
-    "devstart":
-      "concurrently --kill-others-on-fail \"nodemon backend/server.js\" \"npm run start \" "
+    "devstart": "concurrently --kill-others-on-fail \"nodemon backend/server.js\" \"npm run start \" "
   },
   "devDependencies": {
     "concurrently": "^3.5.1",

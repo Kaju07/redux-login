@@ -24,6 +24,8 @@ if (localStorage.testToken && localStorage.testEmail) {
     })
   );
 } else {
+  localStorage.removeItem("testEmail");
+  localStorage.removeItem("testToken");
   store.dispatch(userLoginFail());
 }
 

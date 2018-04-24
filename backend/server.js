@@ -58,7 +58,7 @@ app.post("/api/login", (req, res) => {
       setTimeout(() => res.json(outcome), timer);
     })
     .catch(error => {
-      setTimeout(() => res.json(error), timer); // res.status(400).json(error)
+      setTimeout(() => res.json(error), timer); // res.status(401).json(error)
     });
 });
 
@@ -93,7 +93,7 @@ app.post("/api/logout", (req, res) => {
       setTimeout(() => res.json(outcome), timer);
     })
     .catch(error => {
-      setTimeout(() => res.json(error), timer); // res.status(400).json(error)
+      setTimeout(() => res.json(error), timer); // res.status(401).json(error)
     });
 });
 

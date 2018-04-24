@@ -4,6 +4,7 @@ export default {
   user: {
     login: credentials =>
       axios.post("api/login", credentials).then(res => res.data),
-    logout: () => {}
+    logout: credentials =>
+      axios.post("api/logout", credentials).then(res => res.data)
   }
 };

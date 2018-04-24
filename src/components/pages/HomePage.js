@@ -8,7 +8,16 @@ const HomePage = ({ isAuthenticated, logout }) => (
   <div>
     <h1>Home Page</h1>
     {isAuthenticated ? (
-      <button onClick={() => logout()}>Logout</button>
+      <button
+        onClick={() =>
+          logout({
+            email: localStorage.testEmail,
+            token: localStorage.testToken
+          })
+        }
+      >
+        Logout
+      </button>
     ) : (
       <div>
         <Link to="/login">Login</Link>
