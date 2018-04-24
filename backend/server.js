@@ -23,6 +23,7 @@ app.use(bodyParser.urlencoded({ extended: true }));
 
 app.use(bodyParser.json());
 
+// this function returns a promise because it's a simulation of a 'mongoose' query
 const queryLogin = user => {
   return new Promise((resolve, reject) => {
     if (
@@ -62,6 +63,7 @@ app.post("/api/login", (req, res) => {
     });
 });
 
+// this function returns a promise because it's a simulation of a 'mongoose' query
 const queryLogout = user => {
   return new Promise((resolve, reject) => {
     if (

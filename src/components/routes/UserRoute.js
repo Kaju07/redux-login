@@ -3,6 +3,12 @@ import PropTypes from "prop-types";
 import { connect } from "react-redux";
 import { Route, Redirect } from "react-router-dom";
 
+// this is an Higher Order Component.
+// The essence of this pattern is
+// if user isAuthenticated then render default component (as in App.js)
+// else Redirect to "/".
+// In practice, this means that if user not authenticated goes to "/dashboard"
+// then he's redirected to "/".
 const UserRoute = ({ isAuthenticated, component: Component, ...rest }) => (
   <Route
     {...rest}

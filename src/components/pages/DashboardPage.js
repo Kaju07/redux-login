@@ -4,6 +4,9 @@ import { Button } from "semantic-ui-react";
 import { connect } from "react-redux";
 import * as actions from "../../actions/auth";
 
+// Button logout does not neead a spinner because when clicked
+// isAuthenticated goes to false and user is redirected to "/".
+// See logic in routes components.
 const DashboardPage = ({ isAuthenticated, userEmail, logout }) => (
   <div>
     <div>
@@ -35,6 +38,8 @@ DashboardPage.propTypes = {
   logout: PropTypes.func.isRequired
 };
 
+// the case where isAuthenticated=false and userEmail=""
+// is actually never used but it's there for generality sake.
 const mapStateToProps = state =>
   !!state.userReducer.token
     ? {

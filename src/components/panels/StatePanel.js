@@ -2,6 +2,7 @@ import React from "react";
 import PropTypes from "prop-types";
 import { connect } from "react-redux";
 
+// this is used to show an header with Redux' current state name.
 const StatePanel = ({ currentState }) => (
   <div>
     <h1 style={{ textAlign: "center" }}>Current state is: {currentState}</h1>

@@ -5,6 +5,8 @@ import {
   USER_NOT_LOGGED_IN
 } from "../types";
 
+// the property 'stateName' is used only because according to specifics
+// the name of the states must shown in the app. Otherwise is not needed.
 export default function userReducer(state = {}, action = {}) {
   switch (action.type) {
     case USER_LOGGING_IN:

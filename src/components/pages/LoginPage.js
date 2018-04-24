@@ -5,6 +5,7 @@ import LoginForm from "../forms/LoginForm";
 import { login } from "../../actions/auth";
 
 class LoginPage extends React.Component {
+  //this function returns a promise
   submit = data => this.props.login(data);
 
   render() {
