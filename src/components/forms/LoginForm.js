@@ -1,6 +1,6 @@
 import React from "react";
 import PropTypes from "prop-types";
-import { Form, Button } from "semantic-ui-react";
+import { Form, Button, Message } from "semantic-ui-react";
 import Validator from "validator";
 
 class LoginForm extends React.Component {
@@ -23,9 +23,13 @@ class LoginForm extends React.Component {
     const errors = this.validate(this.state.data);
     this.setState({ errors });
     if (Object.keys(errors).length === 0) {
+      this.setState({ loading: true });
       this.props.submit(this.state.data).then(() => {
         if (!localStorage.testEmail || !localStorage.testToken) {
-          console.log("problems in login");
+          this.setState({
+            errors: { loginDenied: true },
+            loading: false
+          });
         }
       });
     }
@@ -49,9 +53,14 @@ class LoginForm extends React.Component {
   };
 
   render() {
-    const { data, errors } = this.state;
+    const { data, errors, loading } = this.state;
     return (
-      <Form onSubmit={this.onSubmit}>
+      <Form onSubmit={this.onSubmit} loading={loading}>
+        {errors.loginDenied && (
+          <Message negative>
+            <p>Error in login: wrong password or username not found.</p>
+          </Message>
+        )}
         <Form.Field error={!!errors.email}>
           <label htmlFor="email">Email</label>
           <input

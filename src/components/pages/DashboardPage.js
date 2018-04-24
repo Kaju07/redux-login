@@ -1,5 +1,6 @@
 import React from "react";
 import PropTypes from "prop-types";
+import { Button } from "semantic-ui-react";
 import { connect } from "react-redux";
 import * as actions from "../../actions/auth";
 
@@ -11,7 +12,8 @@ const DashboardPage = ({ isAuthenticated, userEmail, logout }) => (
     <div>Hello {userEmail} </div>
     <div>
       {isAuthenticated ? (
-        <button
+        <Button
+          primary
           onClick={() =>
             logout({
               email: localStorage.testEmail,
@@ -20,7 +22,7 @@ const DashboardPage = ({ isAuthenticated, userEmail, logout }) => (
           }
         >
           Logout
-        </button>
+        </Button>
       ) : (
         <span />
       )}
