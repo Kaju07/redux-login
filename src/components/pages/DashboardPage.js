@@ -15,15 +15,12 @@ DashboardPage.propTypes = {
   isAuthenticated: PropTypes.bool.isRequired
 };
 
-const mapStateToProps = state => {
-  if (!!state.userReducer.user) {
-    return {
-      isAuthenticated: !!state.userReducer.user.token,
-      userEmail: state.userReducer.user.email
-    };
-  } else {
-    return { isAuthenticated: false, userEmail: "" };
-  }
-};
+const mapStateToProps = state =>
+  !!state.userReducer.token
+    ? {
+        isAuthenticated: !!state.userReducer.token,
+        userEmail: state.userReducer.email
+      }
+    : { isAuthenticated: false, userEmail: "" };
 
 export default connect(mapStateToProps)(DashboardPage);

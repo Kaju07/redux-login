@@ -13,11 +13,18 @@ export const login = credentials => dispatch => {
   dispatch(userLoggingIn());
 
   return api.user.login(credentials).then(data => {
-    data.success
-      ? dispatch(
-          userLoginSuccess({ user: { email: data.email, token: data.token } })
-        )
-      : dispatch(userLoginFail());
+    if (data.success) {
+      localStorage.testEmail = data.email;
+      localStorage.testToken = data.token;
+      dispatch(
+        userLoginSuccess({
+          email: data.email,
+          token: data.token
+        })
+      );
+    } else {
+      dispatch(userLoginFail());
+    }
   });
 };
 

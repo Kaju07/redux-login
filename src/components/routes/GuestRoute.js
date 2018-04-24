@@ -18,7 +18,7 @@ GuestRoute.propTypes = {
 };
 
 const mapStateToProps = state => ({
-  isAuthenticated: !!(state.userReducer.user && state.userReducer.user.token)
+  isAuthenticated: !!state.userReducer.token
 });
 
 export default connect(mapStateToProps)(GuestRoute);
