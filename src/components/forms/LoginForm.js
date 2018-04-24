@@ -30,8 +30,17 @@ class LoginForm extends React.Component {
   validate = data => {
     const errors = {};
     if (!Validator.isEmail(data.email)) errors.email = "Invalid email";
-    if (!data.password || data.password.length < 1)
-      errors.password = "Password must be at least 1 characters long";
+
+    if (!!data.password) {
+      let format = /[ ^\\,./]/;
+      if (format.test(data.password)) {
+        errors.password =
+          "Password cannot contain special characters: \\ / , . ^ <space>";
+      }
+    } else {
+      errors.password = "Password cannot be void";
+    }
+
     return errors;
   };
 
