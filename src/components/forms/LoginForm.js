@@ -23,7 +23,11 @@ class LoginForm extends React.Component {
     const errors = this.validate(this.state.data);
     this.setState({ errors });
     if (Object.keys(errors).length === 0) {
-      this.props.submit(this.state.data);
+      this.props.submit(this.state.data).then(() => {
+        if (!localStorage.testEmail || !localStorage.testToken) {
+          console.log("problems in login");
+        }
+      });
     }
   };
 
@@ -48,7 +52,7 @@ class LoginForm extends React.Component {
     const { data, errors } = this.state;
     return (
       <Form onSubmit={this.onSubmit}>
-        <Form.Field>
+        <Form.Field error={!!errors.email}>
           <label htmlFor="email">Email</label>
           <input
             type="email"
@@ -60,7 +64,7 @@ class LoginForm extends React.Component {
           />
           <span style={{ color: "#ae5856" }}>{errors.email}</span>
         </Form.Field>
-        <Form.Field>
+        <Form.Field error={!!errors.password}>
           <label htmlFor="password">Password</label>
           <input
             type="password"
