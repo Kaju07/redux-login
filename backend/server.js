@@ -23,7 +23,7 @@ app.use(bodyParser.urlencoded({ extended: true }));
 
 app.use(bodyParser.json());
 
-const query = user => {
+const queryLogin = user => {
   return new Promise((resolve, reject) => {
     if (
       usersDatabase.find(
@@ -35,7 +35,7 @@ const query = user => {
         email: user.email,
         token: "thisisatoken",
         errorMessage: null
-      }; //add token
+      };
       resolve(response);
     } else {
       //let err = new Error("Wrong username/password");
@@ -44,7 +44,7 @@ const query = user => {
         email: user.email,
         token: null,
         errorMessage: "Wrong username/password"
-      }; //add token
+      };
       reject(response);
     }
   });
@@ -53,7 +53,42 @@ const query = user => {
 app.post("/api/login", (req, res) => {
   //random number in range 1000 - 3000
   let timer = Math.random() * 2000 + 1000;
-  query(req.body)
+  queryLogin(req.body)
+    .then(outcome => {
+      setTimeout(() => res.json(outcome), timer);
+    })
+    .catch(error => {
+      setTimeout(() => res.json(error), timer); // res.status(400).json(error)
+    });
+});
+
+const queryLogout = user => {
+  return new Promise((resolve, reject) => {
+    if (
+      usersDatabase.find(u => u.email === user.email) &&
+      user.token === "thisisatoken"
+    ) {
+      let response = {
+        success: true,
+        errorMessage: null
+      };
+      resolve(response);
+    } else {
+      //let err = new Error("Wrong username/password");
+      let response = {
+        success: false,
+        errorMessage: "Wrong username/token"
+      };
+      reject(response);
+    }
+  });
+};
+
+app.post("/api/logout", (req, res) => {
+  //random number in range 1000 - 3000
+  let timer = Math.random() * 2000 + 1000;
+
+  queryLogout(req.body)
     .then(outcome => {
       setTimeout(() => res.json(outcome), timer);
     })
