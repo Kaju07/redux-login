@@ -10,8 +10,8 @@ const StatePanel = ({ currentState }) => (
       header="Current state:"
       content={currentState}
       style={{
-        marginBottom: "2em",
-        marginTop: "2em"
+        marginBottom: "1em",
+        marginTop: "1em"
       }}
     />
   </div>
@@ -21,7 +21,7 @@ StatePanel.propTypes = {
   currentState: PropTypes.string.isRequired
 };
 
-const mapStateToProps = state => ({
+const mapStateToProps = (state, ownProps) => ({
   currentState: state.userReducer.stateName
 });
 
