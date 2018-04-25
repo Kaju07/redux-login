@@ -1,6 +1,6 @@
 import React from "react";
 import PropTypes from "prop-types";
-import { Button } from "semantic-ui-react";
+import { Button, Grid, Header } from "semantic-ui-react";
 import { Link } from "react-router-dom";
 import { connect } from "react-redux";
 import * as actions from "../../actions/auth";
@@ -14,32 +14,39 @@ import * as actions from "../../actions/auth";
 // See semantic-ui-react documentation.
 const HomePage = ({ isAuthenticated, isFetching, logout }) => (
   <div>
-    <h1>Home Page</h1>
-    {isAuthenticated ? (
-      <Button
-        primary
-        onClick={() =>
-          logout({
-            email: localStorage.testEmail,
-            token: localStorage.testToken
-          })
-        }
-      >
-        Logout
-      </Button>
-    ) : (
-      <div>
-        <Button
-          primary
-          disabled={isFetching}
-          loading={isFetching}
-          as={Link}
-          to="/login"
-        >
-          Go to Login
-        </Button>
-      </div>
-    )}
+    <Grid textAlign="center" style={{ height: "100%" }} verticalAlign="middle">
+      <Grid.Column style={{ maxWidth: 450 }}>
+        <Header as="h2" textAlign="center">
+          Welcome
+        </Header>
+
+        {isAuthenticated ? (
+          <Button
+            primary
+            onClick={() =>
+              logout({
+                email: localStorage.testEmail,
+                token: localStorage.testToken
+              })
+            }
+          >
+            Logout
+          </Button>
+        ) : (
+          <div>
+            <Button
+              primary
+              disabled={isFetching}
+              loading={isFetching}
+              as={Link}
+              to="/login"
+            >
+              Go to Login
+            </Button>
+          </div>
+        )}
+      </Grid.Column>
+    </Grid>
   </div>
 );
 

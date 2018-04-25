@@ -1,6 +1,6 @@
 import React from "react";
 import PropTypes from "prop-types";
-import { Button } from "semantic-ui-react";
+import { Button, Grid, Header, Message } from "semantic-ui-react";
 import { connect } from "react-redux";
 import * as actions from "../../actions/auth";
 
@@ -9,27 +9,38 @@ import * as actions from "../../actions/auth";
 // See logic in routes components.
 const DashboardPage = ({ isAuthenticated, userEmail, logout }) => (
   <div>
-    <div>
-      <h1>Dashboard</h1>
-    </div>
-    <div>Hello {userEmail} </div>
-    <div>
-      {isAuthenticated ? (
-        <Button
-          primary
-          onClick={() =>
-            logout({
-              email: localStorage.testEmail,
-              token: localStorage.testToken
-            })
-          }
-        >
-          Logout
-        </Button>
-      ) : (
-        <span />
-      )}
-    </div>
+    <Grid textAlign="center" style={{ height: "100%" }} verticalAlign="middle">
+      <Grid.Column style={{ maxWidth: 450 }}>
+        <Header as="h2" textAlign="center">
+          Dashboard
+        </Header>
+
+        <Message
+          header="This is the app for beloved user"
+          content={userEmail}
+          style={{
+            marginBottom: "1em",
+            marginTop: "1em"
+          }}
+        />
+
+        {isAuthenticated ? (
+          <Button
+            primary
+            onClick={() =>
+              logout({
+                email: localStorage.testEmail,
+                token: localStorage.testToken
+              })
+            }
+          >
+            Logout
+          </Button>
+        ) : (
+          <span />
+        )}
+      </Grid.Column>
+    </Grid>
   </div>
 );
 
