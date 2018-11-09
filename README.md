@@ -1,6 +1,5 @@
-## Login/Logout Workflow Demo
-
-Login/Logout frontend/backend proof of concept.
+## React Login/Logout Workflow
+This is a simple login/logout system built with React, Redux and Node.js
 
 ### Installation
 
