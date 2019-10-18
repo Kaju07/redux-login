@@ -10,17 +10,12 @@ import App from "./App";
 import registerServiceWorker from "./registerServiceWorker";
 import rootReducer from "./rootReducer";
 import { userLoginSuccess, userLoginFail } from "./actions/auth";
-
+import 'antd/dist/antd.css';
 const store = createStore(
   rootReducer,
   composeWithDevTools(applyMiddleware(thunk))
 );
 
-// this snippet is needed  if user refresh page through browser.
-// In that case credentials, if any, are recovered from localStorege
-// and corresponding action is dispatched.
-// Name of dispatched functions are not proper names, but this app has been
-// made with economy of states and actions in mind.
 if (localStorage.testToken && localStorage.testEmail) {
   store.dispatch(
     userLoginSuccess({
@@ -34,9 +29,6 @@ if (localStorage.testToken && localStorage.testEmail) {
   store.dispatch(userLoginFail());
 }
 
-// App must be wrapped with Route to cope with the update-blocking problem.
-// See https://github.com/ReactTraining/react-router/blob/master/packages/react-router/docs/guides/blocked-updates.md
-// at "Recommended Solution"
 ReactDOM.render(
   <BrowserRouter>
     <Provider store={store}>

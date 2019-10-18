@@ -1,4 +1,3 @@
-//Axios is a promise based HTTP client for Node.js and browser.
 import axios from "axios";
 
 export default {

@@ -1,0 +1,411 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Istok Web', sans-serif !important;
+
+}
+
+code {
+    font-family: 'Istok Web', sans-serif;
+}
+
+body {
+    font-family: 'Istok Web', sans-serif;
+}
+
+.ant-layout {
+    background: none !important;
+}
+
+.header {
+    border-bottom: 2px solid #198eef;
+}
+
+
+
+
+.wbsit-list {
+    display: flex;
+    align-content: space-between;
+    justify-content: space-between;
+}
+
+.custom-container {
+    margin-top: 20px;
+    padding-left: 50px !important;
+    padding-right: 50px !important;
+}
+
+
+.antd-pro-notice-icon-badge {
+    font-size: 21px !important;
+
+}
+
+.notificateion-bar {
+    display: flex !important;
+    align-content: start !important;
+    justify-content: start !important;
+
+}
+
+.antd-pro-notice-icon-tabs .ant-tabs-nav-scroll {
+    text-align: start !important;
+}
+
+.analytics-card-header {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+    border-bottom: 1px solid #d9d9d9;
+}
+
+.analytics-container {
+    display: flex;
+    position: relative;
+    flex-direction: column;
+    border-radius: 4px;
+    box-shadow: 0 3px 10px 0 #e0e0e0;
+    margin-bottom: 20px;
+    min-height: 570px;
+    max-height: 570px;
+    cursor: pointer;
+    transition: 0.3s;
+    text-decoration: none;
+    width: 100%;
+    padding: 20px;
+}
+
+.analytics-container:hover {
+    transform: translate(0px, -4px);
+    transition: 0.3s;
+}
+
+.mail-title {
+    font-weight: 600;
+    font-size: 1.5em;
+}
+
+.image {
+    margin-left: auto;
+    margin-right: auto;
+    width: 50em !important;
+}
+
+.image img {
+    width: 100%;
+}
+
+.single-mail-header {
+    font-weight: 600 !important;
+    font-size: 2em !important;
+}
+
+.from p {
+    font-weight: 600 !important;
+    font-size: 1.1em !important;
+    color: rgba(0, 0, 0, 0.75) !important;
+}
+
+.Sent p {
+    font-weight: 600 !important;
+    font-size: 1.1em !important;
+    color: rgba(0, 0, 0, 0.75) !important;
+}
+
+/* Billing */
+.Billing-cntr {
+    padding: 20px;
+    border: 1px #d9d9d9 solid;
+    box-shadow: 0 3px 10px 0 #b1b0b0;
+}
+
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 60px;
+    height: 34px;
+    margin-top: -5em;
+}
+
+/* Hide default HTML checkbox */
+.switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+/* The slider */
+.slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    -webkit-transition: 0.4s;
+    transition: 0.4s;
+}
+
+.slider:before {
+    position: absolute;
+    content: "";
+    height: 26px;
+    width: 26px;
+    left: 4px;
+    bottom: 4px;
+    background-color: white;
+    -webkit-transition: 0.4s;
+    transition: 0.4s;
+}
+
+input:checked+.slider {
+    background-color: #198eef;
+}
+
+input:focus+.slider {
+    box-shadow: 0 0 1px #198eef;
+}
+
+input:checked+.slider:before {
+    -webkit-transform: translateX(26px);
+    -ms-transform: translateX(26px);
+    transform: translateX(26px);
+}
+
+/* Rounded sliders */
+.slider.round {
+    border-radius: 34px;
+}
+
+.slider.round:before {
+    border-radius: 50%;
+}
+
+.plan-cntr {
+    max-height: 900px;
+    min-height: 650px;
+    width: 90%;
+    border: 1px #d9d9d9 solid;
+    border-radius: 10px;
+    box-shadow: 0 3px 10px 0 #b1b0b0;
+}
+
+.billing-upper-cntnr {
+    height: 100px;
+    background: #198eef;
+    color: white;
+    padding: 5%;
+}
+
+.billing-middle-cntnr {
+    margin-top: 30px;
+}
+
+.billing-upper-cntnr h2 {
+    color: white;
+    font-weight: 800;
+}
+
+.billing-upper-cntnr h3 {
+    color: white;
+    font-weight: 600;
+}
+
+.billContainer {
+
+    justify-content: center;
+}
+
+.year .month {
+    font-size: 1.2em !important;
+}
+
+
+.check-icon {
+    color: #198eef !important;
+    font-weight: 600 !important;
+    font-size: 20px;
+}
+
+.aftr-border {
+    height: 50px;
+    width: 100%;
+    border-bottom: 0.5px #d9d9d9 solid;
+    margin-bottom: 10px;
+}
+
+.invoice-cntr {
+    height: 70vh;
+    padding: 20px;
+    border: 0.5px #d9d9d9 solid;
+    box-shadow: 0 3px 10px 0 #b1b0b0;
+}
+
+.info-cntnr {
+    padding-left: 30%;
+    padding-right: 30%;
+}
+
+.country-dropdwn {
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-variant: tabular-nums;
+    list-style: none;
+    -webkit-font-feature-settings: 'tnum';
+    font-feature-settings: 'tnum', "tnum";
+    position: relative;
+    display: inline-block;
+    width: 100%;
+    height: 32px;
+    padding: 4px 11px;
+    color: rgba(0, 0, 0, 0.65);
+    font-size: 14px;
+    line-height: 1.5;
+    background-color: #fff;
+    background-image: none;
+    border: 1px solid #d9d9d9;
+    border-radius: 4px;
+    -webkit-transition: all 0.3s;
+    transition: all 0.3s;
+}
+
+.country-dropdwn:hover {
+    border: 1px solid skyblue;
+}
+
+/* Font styles */
+.app-hdng h2 {
+    font-weight: 600;
+    font-size: 2.2em;
+}
+
+.app-hdng h3 {
+    font-weight: 600;
+    font-size: 1.3em;
+}
+
+.app-hdng h4 {
+    font-size: 1.5em;
+    font-weight: 600;
+}
+
+.app-hdng h5 {
+    font-size: 1em;
+    font-weight: 600;
+}
+
+
+.web-title p {
+    font-size: 1.2em;
+    font-weight: 500;
+}
+
+.app-hdng p {
+    font-size: 1.1em;
+    font-weight: 600;
+}
+
+.pagination {
+    float: right !important;
+    display: inline-block;
+    padding-left: 0;
+    margin: 20px 0;
+    border-radius: 4px;
+}
+
+.billing-data p {
+    font-size: 1.1em;
+}
+
+.month {
+    margin-right: 2%;
+    font-weight: 600;
+    font-size: 1.3em;
+}
+
+.year {
+    margin-left: 2%;
+    font-weight: 600;
+    font-size: 1.3em;
+}
+
+.site-btn {
+    display: flex;
+    align-content: center;
+    justify-content: center;
+}
+
+.ant-btn {
+    background-color: #198eef !important;
+    color: white !important;
+}
+
+.login-warp {
+    border-radius: 10px;
+    margin: auto;
+    width: 30%;
+    padding: 20px;
+    box-shadow: 0 6px 20px 2px #e0e0e0;
+    margin-top: 6em;
+}
+
+.reg-warp {
+    border-radius: 10px;
+    margin: auto;
+    width: 50%;
+    padding: 20px;
+    box-shadow: 0 6px 20px 2px #e0e0e0;
+    margin-top: 6em;
+}
+
+.main {
+    display: table !important;
+    width: 100%;
+
+}
+
+.inner {
+    display: table-cell !important;
+    vertical-align: middle !important;
+    height: 80px;
+    border: 1px solid #d9d9d9 !important;
+
+}
+
+.inner h4 {
+    font-weight: 700;
+    font-size: 1.5em;
+}
+
+.inner h3 {
+    color: #198eef;
+    font-weight: 700;
+    font-size: 1.5em;
+}
+
+.mail-image img {
+    width: 100% !important;
+}
+
+@media only screen and (max-width: 1025px) {
+    body {
+        background-color: lightblue;
+    }
+
+    .sngl-mail-image {
+        height: 50em !important;
+        width: 700px;
+        display: flex;
+        align-content: center !important;
+        justify-content: center !important;
+    }
+
+    .sngl-mail-image img {
+        height: 100%;
+        width: 100%;
+    }
+}

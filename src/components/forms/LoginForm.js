@@ -11,8 +11,6 @@ import {
 import Validator from "validator";
 
 class LoginForm extends React.Component {
-  // this component handles states internally.
-  // 'loading' is used during fetching in order to show spinner.
   state = {
     data: {
       email: "",
@@ -22,7 +20,6 @@ class LoginForm extends React.Component {
     errors: {}
   };
 
-  // this is in abstract form in order to avoid using two functions: onChangeEmail, onChangePassword
   onChange = e =>
     this.setState({
       data: { ...this.state.data, [e.target.name]: e.target.value }
@@ -31,13 +28,8 @@ class LoginForm extends React.Component {
   onSubmit = () => {
     const errors = this.validate(this.state.data);
     this.setState({ errors });
-    // if property 'error' has no internal objects inside
     if (Object.keys(errors).length === 0) {
-      // disable form
       this.setState({ loading: true });
-      // after fetching
-      // - if user is logged in then credentials are written into localStorage and user is redirected away (see routes components)
-      // - if user is not logged in because credentials were wrong then an error is shown and spinner is stopped
       this.props.submit(this.state.data).then(() => {
         if (!localStorage.testEmail || !localStorage.testToken) {
           this.setState({
@@ -51,14 +43,8 @@ class LoginForm extends React.Component {
 
   validate = data => {
     const errors = {};
-    // specifics did not required email as username but I realized this in a following time.
     if (!Validator.isEmail(data.email)) errors.email = "Invalid email";
-
-    // password must not contain some characters, according to specifics
-    // and must not be void
     if (data.password) {
-      // regexp meaning = "at least one instance of at least one of the following single characters"
-      // note than <blank space> has been added to specifics
       const format = /[ ^\\,./]/;
       if (format.test(data.password)) {
         errors.password =

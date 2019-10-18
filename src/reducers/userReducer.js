@@ -34,7 +34,6 @@ export default function userReducer(state = {}, action = {}) {
         { stateName: USER_NOT_LOGGED_IN },
         { isFetching: false }
       );
-
     default:
       return state;
   }

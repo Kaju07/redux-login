@@ -1,5 +1,3 @@
-/* eslint-disable */
-
 const express = require("express");
 const bodyParser = require("body-parser");
 const path = require("path");
@@ -8,22 +6,16 @@ const port = process.env.PORT || 8080;
 
 const usersDatabase = [
   { email: "admin@email.it", password: "admin" },
+  { email: "kajal@gmail.com", password: "kaju" },
   { email: "user1@email.it", password: "user1" },
   { email: "user2@email.it", password: "user2" },
   { email: "user3@email.it", password: "user3" },
   { email: "user4@email.it", password: "user4" }
 ];
-// app.use(express.static(path.join(__dirname, 'build')));
-
-// for parsing application/x-www-form-urlencoded
 app.use(bodyParser.urlencoded({ extended: true }));
-
-// for parsing multipart/form-data
-//app.use(multer());
 
 app.use(bodyParser.json());
 
-// this function returns a promise because it's a simulation of a 'mongoose' query
 const queryLogin = user => {
   return new Promise((resolve, reject) => {
     if (
@@ -39,7 +31,6 @@ const queryLogin = user => {
       };
       resolve(response);
     } else {
-      //let err = new Error("Wrong username/password");
       let response = {
         success: false,
         email: user.email,
@@ -52,18 +43,16 @@ const queryLogin = user => {
 };
 
 app.post("/api/login", (req, res) => {
-  //random number in range 1000 - 3000
-  let timer = Math.random() * 2000 + 1000;
+  let timer = Math.random() * 2 + 1;
   queryLogin(req.body)
     .then(outcome => {
       setTimeout(() => res.json(outcome), timer);
     })
     .catch(error => {
-      setTimeout(() => res.json(error), timer); // res.status(401).json(error)
+      setTimeout(() => res.json(error), timer);
     });
 });
 
-// this function returns a promise because it's a simulation of a 'mongoose' query
 const queryLogout = user => {
   return new Promise((resolve, reject) => {
     if (
@@ -76,7 +65,6 @@ const queryLogout = user => {
       };
       resolve(response);
     } else {
-      //let err = new Error("Wrong username/password");
       let response = {
         success: false,
         errorMessage: "Wrong username/token"
@@ -87,15 +75,13 @@ const queryLogout = user => {
 };
 
 app.post("/api/logout", (req, res) => {
-  //random number in range 1000 - 3000
-  let timer = Math.random() * 2000 + 1000;
-
+  let timer = Math.random() * 2 + 1;
   queryLogout(req.body)
     .then(outcome => {
       setTimeout(() => res.json(outcome), timer);
     })
     .catch(error => {
-      setTimeout(() => res.json(error), timer); // res.status(401).json(error)
+      setTimeout(() => res.json(error), timer);
     });
 });
 

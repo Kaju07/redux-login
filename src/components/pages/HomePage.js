@@ -5,13 +5,6 @@ import { Link } from "react-router-dom";
 import { connect } from "react-redux";
 import * as actions from "../../actions/auth";
 
-// Button logic is:
-// - if user isAuthenticated it shows "Logout"
-// - if user is-not-Authenticated and is fetching then it shows a spinner
-// - if user is-not-Authenticated and is-not-fetching then it points to Login page
-//
-// The as={Link} to="/login" props are used to use Button from semantic-ui-react to wrap Link from react-router-dom
-// See semantic-ui-react documentation.
 const HomePage = ({ isAuthenticated, isFetching, logout }) => (
   <div>
     <Grid textAlign="center" style={{ height: "100%" }} verticalAlign="middle">
@@ -33,18 +26,18 @@ const HomePage = ({ isAuthenticated, isFetching, logout }) => (
             Logout
           </Button>
         ) : (
-          <div>
-            <Button
-              primary
-              disabled={isFetching}
-              loading={isFetching}
-              as={Link}
-              to="/login"
-            >
-              Go to Login
+            <div>
+              <Button
+                primary
+                disabled={isFetching}
+                loading={isFetching}
+                as={Link}
+                to="/login"
+              >
+                Go to Login
             </Button>
-          </div>
-        )}
+            </div>
+          )}
       </Grid.Column>
     </Grid>
   </div>

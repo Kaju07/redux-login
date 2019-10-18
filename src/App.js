@@ -3,30 +3,75 @@ import PropTypes from "prop-types";
 import { Route } from "react-router-dom";
 import HomePage from "./components/pages/HomePage";
 import LoginPage from "./components/pages/LoginPage";
-import DashboardPage from "./components/pages/DashboardPage";
+import Logout from "./components/pages/DashboardPage";
 import StatePanel from "./components/panels/StatePanel";
 import TopNavigation from "./components/navigation/TopNavigation";
 import UserRoute from "./components/routes/UserRoute";
 import GuestRoute from "./components/routes/GuestRoute";
+import CustomDomain from "./components/pages/customdomain"
+import { Layout, Menu, Breadcrumb, Icon } from 'antd';
+import Sidebar from './components/sidebar'
+import Billing from "./components/pages/billing"
+import Dashboard from './components/pages/dashboard'
+import Website from './components/pages/websites'
+import Inbox from './components/pages/inbox'
+const { Content, Footer, Sider } = Layout;
 
-// { location } must be passed to cope with the update-blocking problem.
-// See https://github.com/ReactTraining/react-router/blob/master/packages/react-router/docs/guides/blocked-updates.md
-// at "Recommended Solution"
-//
-// GuestRoute and UserRoute are Higher Order Components. They are used to handle routing logic according to access level.
-// See their respective components.
 const App = ({ location }) => (
-  <div className="ui container">
-    <StatePanel />
-    <TopNavigation />
-    <Route location={location} exact path="/" component={HomePage} />
-    <GuestRoute location={location} exact path="/login" component={LoginPage} />
-    <UserRoute
-      location={location}
-      exact
-      path="/dashboard"
-      component={DashboardPage}
-    />
+  <div>
+    <Layout>
+      <Sidebar />
+      <Layout style={{ height: '100vh' }}>
+        {/* <StatePanel /> */}
+        <TopNavigation />
+        <Route location={location} exact path="/" component={HomePage} />
+        <GuestRoute location={location} exact path="/login" component={LoginPage} />
+        <UserRoute
+          location={location}
+          exact
+          path="/logout"
+          component={Logout}
+        />
+         <UserRoute
+          location={location}
+          exact
+          path="/billing"
+          component={Billing}
+        />
+         <UserRoute
+          location={location}
+          exact
+          path="/websites"
+          component={Website}
+        />
+         <UserRoute
+          location={location}
+          exact
+          path="/inbox"
+          component={Inbox}
+        />
+         <UserRoute
+          location={location}
+          exact
+          path="/billing"
+          component={Billing}
+        />
+        <UserRoute
+          location={location}
+          exact
+          path="/customdomain"
+          component={CustomDomain}
+        />
+          <UserRoute
+          location={location}
+          exact
+          path="/dashboard"
+          component={Dashboard}
+        />
+        
+      </Layout>
+    </Layout>
+
   </div>
 );
 
