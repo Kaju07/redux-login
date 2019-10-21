@@ -11,6 +11,7 @@ import registerServiceWorker from "./registerServiceWorker";
 import rootReducer from "./rootReducer";
 import { userLoginSuccess, userLoginFail } from "./actions/auth";
 import 'antd/dist/antd.css';
+import './index.css';
 const store = createStore(
   rootReducer,
   composeWithDevTools(applyMiddleware(thunk))

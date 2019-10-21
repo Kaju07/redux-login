@@ -21,7 +21,7 @@ class Sidebar extends Component {
 
     render(isAuthenticated,
         isFetching,
-        pathname, 
+        pathname,
         login,
         logout) {
         console.log("Sidebar Props", this.props);
@@ -83,9 +83,7 @@ class Sidebar extends Component {
                         onClick={this.toggle}
                     />
                 </Header>
-
             </Sider>
-
         );
     }
 }
@@ -97,15 +95,12 @@ Sidebar.propTypes = {
     logout: PropTypes.func.isRequired
 };
 
-// ownProps is for the props of the component
-// this had to be used because this is a stateless component
 const mapStateToProps = (state, ownProps) => ({
     isAuthenticated: !!state.userReducer.token,
     isFetching: state.userReducer.isFetching,
     pathname: ownProps.location.pathname
 });
 
-// withRouter() wraps the component so that in ownProps is accessible 'location'
 export default withRouter(
     connect(mapStateToProps, { login: actions.login, logout: actions.logout })(
         Sidebar

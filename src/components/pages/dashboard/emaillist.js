@@ -2,11 +2,8 @@ import React, { Component } from 'react'
 import PropTypes from 'prop-types'
 import { DatePicker, Col, Row, Tag, Menu, Dropdown, Icon, Input, Tooltip, Select, Rate } from 'antd';
 import { Link } from "react-router-dom";
-
 import Mail1 from "../../../images/mail1.png"
-
 import Mail from "../../../images/mail.png"
-
 import './singlemail';
 const { Search } = Input;
 const { Option } = Select;
@@ -18,7 +15,7 @@ function onChange(date, dateString) {
     console.log(date, dateString);
 }
 
- export default class Emaillist extends Component {
+export default class Emaillist extends Component {
     static propTypes = {
         prop: PropTypes
     }

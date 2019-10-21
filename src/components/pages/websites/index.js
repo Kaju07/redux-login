@@ -152,7 +152,7 @@ export default class Index extends Component {
                         />
                     </Col>
                 </Row>
-                <div className="App">
+                <div className="pagination">
                     <Pagination className="" defaultCurrent={1} total={50} />
                 </div>
             </div>

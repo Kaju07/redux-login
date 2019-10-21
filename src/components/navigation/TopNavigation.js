@@ -22,23 +22,16 @@ class TopNavigation extends Component {
 						}}
 					>
 						<Menu.Item as={Link} to="/">
-							<NavLink to="/dashboard">
-								{/* <Icon type="dashboard" /> */}
+							<NavLink to="/login">
 								<span className="cs-icon">Home</span>
 							</NavLink>
 						</Menu.Item>
-
-
 						<Menu.Item disabled={!isAuthenticated} as={Link} to="/dashboard">
 							<NavLink to="/dashboard">
-								{/* <Icon type="dashboard" /> */}
 								<span className="cs-icon">Dashboard</span>
 							</NavLink>
 							Dashboard
 				   </Menu.Item>
-						<Menu.Item disabled={!isAuthenticated} as={Link} to="/customdomain">
-							CustomDomain
-					</Menu.Item>
 						{isAuthenticated ? (
 							<Menu.Menu position="right">
 								<Dropdown item text="Dropdown">
@@ -62,9 +55,7 @@ class TopNavigation extends Component {
 				) : null}
 			</div>
 		);
-
 	}
-
 }
 
 TopNavigation.propTypes = {
@@ -74,16 +65,11 @@ TopNavigation.propTypes = {
 	login: PropTypes.func.isRequired,
 	logout: PropTypes.func.isRequired
 };
-
-// ownProps is for the props of the component
-// this had to be used because this is a stateless component
 const mapStateToProps = (state, ownProps) => ({
 	isAuthenticated: !!state.userReducer.token,
 	isFetching: state.userReducer.isFetching,
 	pathname: ownProps.location.pathname
 });
-
-// withRouter() wraps the component so that in ownProps is accessible 'location'
 export default withRouter(
 	connect(mapStateToProps, { login: actions.login, logout: actions.logout })(
 		TopNavigation

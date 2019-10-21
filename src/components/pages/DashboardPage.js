@@ -29,9 +29,10 @@ const DashboardPage = ({ isAuthenticated, userEmail, logout }) => (
               })
             }
           >
-            Logout
+            Logoutaaaa
           </Button>
-        ) : (
+        ) 
+        : (
             <span />
           )}
       </Grid.Column>

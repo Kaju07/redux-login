@@ -1,11 +1,9 @@
 import React, { Component } from 'react'
 import PropTypes from 'prop-types'
 import { connect } from "react-redux";
-import rotateAction from "actions/rotateAction";
 import { DatePicker, Col, Row, Tag, Menu, Dropdown, Icon, Input, Tooltip, Select, Rate } from 'antd';
 import { Link } from "react-router-dom";
-import Mail from "../../images/mail.png";
-import Mail1 from "../../images/mail1.png";
+import Mail from "../../../images/mail.png";
 import '../dashboard/singlemail';
 const { Option } = Select;
 const { Search } = Input;
@@ -14,7 +12,7 @@ const desc = ['Add to favorites'];
 function onChange(date, dateString) {
     console.log(date, dateString);
 }
-class Index extends Component {
+export default class Index extends Component {
     static propTypes = {
         prop: PropTypes
     }
@@ -173,10 +171,5 @@ class Index extends Component {
     }
 }
 
-const mapStateToProps = state => ({
-    ...state
-});
-const mapDispatchToProps = dispatch => ({
-    rotateAction: (payload) => dispatch(rotateAction(payload))
-});
-export default connect(mapStateToProps, mapDispatchToProps)(Index);
+
+

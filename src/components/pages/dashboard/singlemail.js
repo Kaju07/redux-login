@@ -4,7 +4,7 @@ import { Row, Col, Tabs } from 'antd';
 import Mail from "../../../images/mail.png"
 import { connect } from "react-redux";
 const { TabPane } = Tabs;
-class Singlemail extends Component {
+export default class Singlemail extends Component {
     static propTypes = {
         prop: PropTypes
     }
@@ -20,7 +20,6 @@ class Singlemail extends Component {
                     </Col>
                 </div>
             </Row>
-
         )
     }
     render() {
@@ -77,4 +76,3 @@ class Singlemail extends Component {
     }
 }
 
-export default connect(Singlemail);

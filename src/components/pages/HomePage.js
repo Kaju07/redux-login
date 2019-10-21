@@ -24,6 +24,7 @@ const HomePage = ({ isAuthenticated, isFetching, logout }) => (
             }
           >
             Logout
+
           </Button>
         ) : (
             <div>

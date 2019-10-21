@@ -2,7 +2,6 @@ import React, { Component } from 'react';
 import { Row, Col, Pagination } from 'antd';
 import Emaillist from "../dashboard/emaillist"
 
-
 export default class Index extends Component {
     render() {
         return (
