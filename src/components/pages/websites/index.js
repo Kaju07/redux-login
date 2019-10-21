@@ -1,7 +1,8 @@
 import React, { Component } from 'react'
 import PropTypes from 'prop-types'
 import { connect } from "react-redux";
-import { DatePicker, Col, Row, Tag, Menu, Dropdown, Icon, Input, List, Pagination, Button, notification, Modal, Select } from 'antd';
+import { DatePicker, Col, Row, Tooltip, Input, List, Pagination, Button, notification, Modal, Select } from 'antd';
+import Addwebsite from '../../navigation/addwebsite';
 
 import Editwebsite from './editwebsite';
 const { Search } = Input;
@@ -44,18 +45,11 @@ export default class Index extends Component {
             visible: false,
         });
     };
-    openPromptModal(event) {
-        this.props.showModal({
-            open: true,
-            title: 'Prompt Modal',
-            fields: [{
-                label: 'Address name',
-                name: 'addressName',
-                placeholder: 'Enter address name',
-            }],
-            onInputChange: this.onInputChange,
-            confirmAction: this.showInput
-        }, 'prompt')
+    openPromptModal() {
+        console.log("in show create site")
+        return (
+            <Addwebsite />
+        )
     }
     render() {
         const openNotificationWithIcon = type => {
@@ -93,10 +87,9 @@ export default class Index extends Component {
                                 </div>
                             </Col>
                             <Col xs={24} md={6} lg={3} >
-                                <Button onClick={this.openPromptModal}>
-                                    Add New Website
-                                </Button>
-
+                                <Tooltip title="Add New Website">
+                                    <Button style={{ fontSize: '22px', color: '#08c' }}><Addwebsite /></Button>
+                                </Tooltip>
                             </Col>
                         </Row>
                     </Col>

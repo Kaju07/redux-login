@@ -47,7 +47,9 @@ export default class index extends Component {
 
     getRawMarkup() {
         const md = new Remarkable();
-        return { __html: md.render(this.state.value) };
+        return {
+            __html: md.render(this.state.value)
+        };
     }
     showModal = () => {
         this.setState({
@@ -162,7 +164,7 @@ export default class index extends Component {
                         />
                     </Col>
                 </Row>
-                <div className="App">
+                <div className="pagination">
                     <Pagination defaultCurrent={1} total={50} />
                 </div>
 

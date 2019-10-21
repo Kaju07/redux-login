@@ -32,7 +32,6 @@ export const login = credentials => dispatch => {
 
 export const logout = credentials => dispatch => {
   dispatch(userLoggingOut());
-
   return api.user.logout(credentials).then(data => {
     localStorage.removeItem("testEmail");
     localStorage.removeItem("testToken");

@@ -143,79 +143,79 @@ export default class packages extends Component {
                                                 $190 / Yearly
                                             </h3>
                                         </div>
-                                        <div className="billing-middle-cntnr">
-                                            <div>
+                                        <div className="billing-middle-cntnr billing-data">
+                                            <Row className="bill-row">
                                                 <Col className="check-icon" xs={24} md={6} lg={2}>
                                                     <Icon type="check" style={{ textAlign: 'center' }} />
                                                 </Col>
                                                 <Col xs={24} md={18} lg={22} style={{ textAlign: 'start' }}>
                                                     <h1>10 websites monitored 24/7 </h1>
                                                 </Col>
-                                            </div>
-                                            <div>
+                                            </Row>
+                                            <Row className="bill-row">
                                                 <Col className="check-icon" xs={24} md={6} lg={2}>
                                                     <Icon type="check" style={{ textAlign: 'center' }} />
                                                 </Col>
                                                 <Col xs={24} md={18} lg={22} style={{ textAlign: 'start' }}>
                                                     <h1>1 x Monthly summary email roundup Get a roundup of all emails we've received in the last month</h1>
                                                 </Col>
-                                            </div>
-                                            <div>
+                                            </Row>
+                                            <Row className="bill-row">
                                                 <Col className="check-icon" xs={24} md={6} lg={2}>
                                                     <Icon type="check" style={{ textAlign: 'center' }} />
                                                 </Col>
                                                 <Col xs={24} md={18} lg={22} style={{ textAlign: 'start' }}>
                                                     <h1>10 websites monitored 24/7 </h1>
                                                 </Col>
-                                            </div>
-                                            <div>
+                                            </Row>
+                                            <Row className="bill-row">
                                                 <Col className="check-icon" xs={24} md={6} lg={2}>
                                                     <Icon type="check" style={{ textAlign: 'center' }} />
                                                 </Col>
                                                 <Col xs={24} md={18} lg={22} style={{ textAlign: 'start' }}>
                                                     <h1>1 x Monthly summary email roundup Get a roundup of all emails we've received in the last month </h1>
                                                 </Col>
-                                            </div>
-                                            <div>
+                                            </Row>
+                                            <Row className="bill-row">
                                                 <Col className="check-icon" xs={24} md={6} lg={2}>
                                                     <Icon type="check" style={{ textAlign: 'center' }} />
                                                 </Col>
                                                 <Col xs={24} md={18} lg={22} style={{ textAlign: 'start' }}>
                                                     <h1>All emails captured and available to your entire team (Coming Soon)</h1>
                                                 </Col>
-                                            </div>
-                                            <div>
+                                            </Row>
+                                            <Row className="bill-row">
                                                 <Col className="check-icon" xs={24} md={6} lg={2}>
                                                     <Icon type="check" style={{ textAlign: 'center' }} />
                                                 </Col>
                                                 <Col xs={24} md={18} lg={22} style={{ textAlign: 'start' }}>
                                                     <h1>10 websites monitored 24/7 </h1>
                                                 </Col>
-                                            </div>
-                                            <div>
+                                            </Row>
+                                            <Row className="bill-row">
                                                 <Col className="check-icon" xs={24} md={6} lg={2}>
                                                     <Icon type="check" style={{ textAlign: 'center' }} />
                                                 </Col>
                                                 <Col xs={24} md={18} lg={22} style={{ textAlign: 'start' }}>
                                                     <h1>1 x Monthly summary email roundup Get a roundup of all emails we've received in the last month </h1>
                                                 </Col>
-                                            </div>
-                                            <div>
+                                            </Row>
+                                            <Row className="bill-row">
                                                 <Col className="check-icon" xs={24} md={6} lg={2}>
                                                     <Icon type="check" style={{ textAlign: 'center' }} />
                                                 </Col>
                                                 <Col xs={24} md={18} lg={22} style={{ textAlign: 'start' }}>
                                                     <h1>All emails captured and available to your entire team (Coming Soon)</h1>
                                                 </Col>
-                                            </div>
-                                            <div>
+                                            </Row>
+                                            <Row className="bill-row">
                                                 <Col className="check-icon" xs={24} md={6} lg={2}>
                                                     <Icon type="check" style={{ textAlign: 'center' }} />
                                                 </Col>
                                                 <Col xs={24} md={18} lg={22} style={{ textAlign: 'start' }}>
                                                     <h1>1 x Monthly summary email roundup Get a roundup of all emails we've received in the last month </h1>
                                                 </Col>
-                                            </div>
+                                            </Row>
                                         </div>
                                     </div>
                                 </Col>
@@ -237,79 +237,79 @@ export default class packages extends Component {
                                                 $190 / Yearly
                                             </h3>
                                         </div>
-                                        <div className="billing-middle-cntnr">
-                                            <div>
+                                        <div className="billing-middle-cntnr billing-data">
+                                            <Row className="bill-row">
                                                 <Col className="check-icon" xs={24} md={6} lg={2}>
                                                     <Icon type="check" style={{ textAlign: 'center' }} />
                                                 </Col>
                                                 <Col xs={24} md={18} lg={22} style={{ textAlign: 'start' }}>
                                                     <h1>10 websites monitored 24/7 </h1>
                                                 </Col>
-                                            </div>
-                                            <div>
+                                            </Row>
+                                            <Row className="bill-row">
                                                 <Col className="check-icon" xs={24} md={6} lg={2}>
                                                     <Icon type="check" style={{ textAlign: 'center' }} />
                                                 </Col>
                                                 <Col xs={24} md={18} lg={22} style={{ textAlign: 'start' }}>
                                                     <h1>1 x Monthly summary email roundup Get a roundup of all emails we've received in the last month</h1>
                                                 </Col>
-                                            </div>
-                                            <div>
+                                            </Row>
+                                            <Row className="bill-row">
                                                 <Col className="check-icon" xs={24} md={6} lg={2}>
                                                     <Icon type="check" style={{ textAlign: 'center' }} />
                                                 </Col>
                                                 <Col xs={24} md={18} lg={22} style={{ textAlign: 'start' }}>
                                                     <h1>10 websites monitored 24/7 </h1>
                                                 </Col>
-                                            </div>
-                                            <div>
+                                            </Row>
+                                            <Row className="bill-row">
                                                 <Col className="check-icon" xs={24} md={6} lg={2}>
                                                     <Icon type="check" style={{ textAlign: 'center' }} />
                                                 </Col>
                                                 <Col xs={24} md={18} lg={22} style={{ textAlign: 'start' }}>
                                                     <h1>1 x Monthly summary email roundup Get a roundup of all emails we've received in the last month </h1>
                                                 </Col>
-                                            </div>
-                                            <div>
+                                            </Row>
+                                            <Row className="bill-row">
                                                 <Col className="check-icon" xs={24} md={6} lg={2}>
                                                     <Icon type="check" style={{ textAlign: 'center' }} />
                                                 </Col>
                                                 <Col xs={24} md={18} lg={22} style={{ textAlign: 'start' }}>
                                                     <h1>All emails captured and available to your entire team (Coming Soon)</h1>
                                                 </Col>
-                                            </div>
-                                            <div>
+                                            </Row>
+                                            <Row className="bill-row">
                                                 <Col className="check-icon" xs={24} md={6} lg={2}>
                                                     <Icon type="check" style={{ textAlign: 'center' }} />
                                                 </Col>
                                                 <Col xs={24} md={18} lg={22} style={{ textAlign: 'start' }}>
                                                     <h1>10 websites monitored 24/7 </h1>
                                                 </Col>
-                                            </div>
-                                            <div>
+                                            </Row>
+                                            <Row className="bill-row">
                                                 <Col className="check-icon" xs={24} md={6} lg={2}>
                                                     <Icon type="check" style={{ textAlign: 'center' }} />
                                                 </Col>
                                                 <Col xs={24} md={18} lg={22} style={{ textAlign: 'start' }}>
                                                     <h1>1 x Monthly summary email roundup Get a roundup of all emails we've received in the last month </h1>
                                                 </Col>
-                                            </div>
-                                            <div>
+                                            </Row>
+                                            <Row className="bill-row">
                                                 <Col className="check-icon" xs={24} md={6} lg={2}>
                                                     <Icon type="check" style={{ textAlign: 'center' }} />
                                                 </Col>
                                                 <Col xs={24} md={18} lg={22} style={{ textAlign: 'start' }}>
                                                     <h1>All emails captured and available to your entire team (Coming Soon)</h1>
                                                 </Col>
-                                            </div>
-                                            <div>
+                                            </Row>
+                                            <Row className="bill-row">
                                                 <Col className="check-icon" xs={24} md={6} lg={2}>
                                                     <Icon type="check" style={{ textAlign: 'center' }} />
                                                 </Col>
                                                 <Col xs={24} md={18} lg={22} style={{ textAlign: 'start' }}>
                                                     <h1>1 x Monthly summary email roundup Get a roundup of all emails we've received in the last month </h1>
                                                 </Col>
-                                            </div>
+                                            </Row>
                                         </div>
                                     </div>
                                 </Col>
@@ -332,79 +332,79 @@ export default class packages extends Component {
                                                 $190 / Yearly
                                             </h3>
                                         </div>
-                                        <div className="billing-middle-cntnr">
-                                            <div>
+                                        <div className="billing-middle-cntnr billing-data">
+                                            <Row className="bill-row">
                                                 <Col className="check-icon" xs={24} md={6} lg={2}>
                                                     <Icon type="check" style={{ textAlign: 'center' }} />
                                                 </Col>
                                                 <Col xs={24} md={18} lg={22} style={{ textAlign: 'start' }}>
                                                     <h1>10 websites monitored 24/7 </h1>
                                                 </Col>
-                                            </div>
-                                            <div>
+                                            </Row>
+                                            <Row className="bill-row">
                                                 <Col className="check-icon" xs={24} md={6} lg={2}>
                                                     <Icon type="check" style={{ textAlign: 'center' }} />
                                                 </Col>
                                                 <Col xs={24} md={18} lg={22} style={{ textAlign: 'start' }}>
                                                     <h1>1 x Monthly summary email roundup Get a roundup of all emails we've received in the last month</h1>
                                                 </Col>
-                                            </div>
-                                            <div>
+                                            </Row>
+                                            <Row className="bill-row">
                                                 <Col className="check-icon" xs={24} md={6} lg={2}>
                                                     <Icon type="check" style={{ textAlign: 'center' }} />
                                                 </Col>
                                                 <Col xs={24} md={18} lg={22} style={{ textAlign: 'start' }}>
                                                     <h1>10 websites monitored 24/7 </h1>
                                                 </Col>
-                                            </div>
-                                            <div>
+                                            </Row>
+                                            <Row className="bill-row">
                                                 <Col className="check-icon" xs={24} md={6} lg={2}>
                                                     <Icon type="check" style={{ textAlign: 'center' }} />
                                                 </Col>
                                                 <Col xs={24} md={18} lg={22} style={{ textAlign: 'start' }}>
                                                     <h1>1 x Monthly summary email roundup Get a roundup of all emails we've received in the last month </h1>
                                                 </Col>
-                                            </div>
-                                            <div>
+                                            </Row>
+                                            <Row className="bill-row">
                                                 <Col className="check-icon" xs={24} md={6} lg={2}>
                                                     <Icon type="check" style={{ textAlign: 'center' }} />
                                                 </Col>
                                                 <Col xs={24} md={18} lg={22} style={{ textAlign: 'start' }}>
                                                     <h1>All emails captured and available to your entire team (Coming Soon)</h1>
                                                 </Col>
-                                            </div>
-                                            <div>
+                                            </Row>
+                                            <Row className="bill-row">
                                                 <Col className="check-icon" xs={24} md={6} lg={2}>
                                                     <Icon type="check" style={{ textAlign: 'center' }} />
                                                 </Col>
                                                 <Col xs={24} md={18} lg={22} style={{ textAlign: 'start' }}>
                                                     <h1>10 websites monitored 24/7 </h1>
                                                 </Col>
-                                            </div>
-                                            <div>
+                                            </Row>
+                                            <Row className="bill-row">
                                                 <Col className="check-icon" xs={24} md={6} lg={2}>
                                                     <Icon type="check" style={{ textAlign: 'center' }} />
                                                 </Col>
                                                 <Col xs={24} md={18} lg={22} style={{ textAlign: 'start' }}>
                                                     <h1>1 x Monthly summary email roundup Get a roundup of all emails we've received in the last month </h1>
                                                 </Col>
-                                            </div>
-                                            <div>
+                                            </Row>
+                                            <Row className="bill-row">
                                                 <Col className="check-icon" xs={24} md={6} lg={2}>
                                                     <Icon type="check" style={{ textAlign: 'center' }} />
                                                 </Col>
                                                 <Col xs={24} md={18} lg={22} style={{ textAlign: 'start' }}>
                                                     <h1>All emails captured and available to your entire team (Coming Soon)</h1>
                                                 </Col>
-                                            </div>
-                                            <div>
+                                            </Row>
+                                            <Row className="bill-row">
                                                 <Col className="check-icon" xs={24} md={6} lg={2}>
                                                     <Icon type="check" style={{ textAlign: 'center' }} />
                                                 </Col>
                                                 <Col xs={24} md={18} lg={22} style={{ textAlign: 'start' }}>
                                                     <h1>1 x Monthly summary email roundup Get a roundup of all emails we've received in the last month </h1>
                                                 </Col>
-                                            </div>
+                                            </Row>
                                         </div>
                                     </div>
                                 </Col>

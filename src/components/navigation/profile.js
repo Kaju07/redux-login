@@ -1,9 +1,11 @@
-
+import PropTypes from "prop-types";
+import { connect } from "react-redux";
+import * as actions from "../../actions/auth";
 import React from 'react';
 import ReactDOM from 'react-dom';
 import 'antd/dist/antd.css';
 import { Drawer, Form, Button, Col, Row, Input, Select, Icon, Checkbox } from 'antd';
- export default class Profile extends React.Component {
+class Profile extends React.Component {
     constructor() {
         super();
 
@@ -29,11 +31,10 @@ import { Drawer, Form, Button, Col, Row, Input, Select, Icon, Checkbox } from 'a
             checked: !this.state.checked
         })
     }
-    render = ({ isAuthenticated, userEmail, logout }) => {
+    render = () => {
         const content = this.state.checked
             ? <div><Input placeholder="Email prefix" />  </div>
             : null;
-
         return (
             <div>
                 <span onClick={this.showDrawer}>
@@ -62,7 +63,7 @@ import { Drawer, Form, Button, Col, Row, Input, Select, Icon, Checkbox } from 'a
                         <Row gutter={24}>
                             <Col span={24}>
                                 <Form.Item label="Email">
-                                    <Input placeholder="Change Email" value={userEmail} />
+                                    <Input placeholder="Change Email" />
                                 </Form.Item>
                             </Col>
                             <Col span={24}>
@@ -119,7 +120,18 @@ import { Drawer, Form, Button, Col, Row, Input, Select, Icon, Checkbox } from 'a
         );
     }
 }
+Profile.propTypes = {
+    isAuthenticated: PropTypes.bool.isRequired,
+    isFetching: PropTypes.bool.isRequired,
+    logout: PropTypes.func.isRequired
+};
 
+const mapStateToProps = state => ({
+    isAuthenticated: !!state.userReducer.token,
+    isFetching: state.userReducer.isFetching
+});
+
+export default connect(mapStateToProps, { logout: actions.logout })(Profile);
 
 
 

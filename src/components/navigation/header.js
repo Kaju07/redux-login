@@ -25,7 +25,7 @@ class Header extends Component {
         console.log("Header props", this.props);
         const menu = (
             <Menu style={{ width: "100px" }}>
-                <Menu.Item key="1">aaa</Menu.Item>
+                <Menu.Item key="1"><Profile/></Menu.Item>
                 <Menu.Item key="2"><Logout /></Menu.Item>
             </Menu>
         );

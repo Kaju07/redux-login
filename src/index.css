@@ -391,6 +391,16 @@ input:checked+.slider:before {
     width: 100% !important;
 }
 
+.billing-data h1 {
+    font-weight: 500;
+    font-size: 1.3em;
+}
+
+.bill-row {
+    display: flex;
+
+}
+
 @media only screen and (max-width: 1025px) {
     body {
         background-color: lightblue;

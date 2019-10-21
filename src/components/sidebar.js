@@ -19,11 +19,7 @@ class Sidebar extends Component {
         });
     };
 
-    render(isAuthenticated,
-        isFetching,
-        pathname,
-        login,
-        logout) {
+    render() {
         console.log("Sidebar Props", this.props);
         console.log("collapsed", this.props.collapsed)
         return (
@@ -31,7 +27,7 @@ class Sidebar extends Component {
             >
                 <div className="App">
                     CatchLetter
-                    </div>
+                </div>
                 <Menu className="custom-scroll-none-moz" theme="dark" mode="inline" defaultSelectedKeys={['/']} >
                     <Menu.Item key="/dashboard">
                         <NavLink to="/dashboard">

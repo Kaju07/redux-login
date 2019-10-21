@@ -20,8 +20,7 @@ import Dashboard_singlemail from './components/pages/dashboard/singlemail'
 import Alert from './components/pages/alerts'
 import Header from './components/navigation/header';
 // import { Route, Redirect } from "react-router-dom";
-
-const { Content, Footer, Sider } = Layout;
+// const { Content, Footer, Sider } = Layout;
 const App = ({ location }) => (
   <div>
     <Layout>
@@ -31,14 +30,14 @@ const App = ({ location }) => (
         <Route location={location} exact path="/" component={HomePage} />
         <GuestRoute location={location} exact path="/login" component={LoginPage} />
         <UserRoute location={location} exact path="/logout" component={Logout} />
-        <UserRoute location={location} exact path="/dashboard" component={Dashboard} />
-        <UserRoute location={location} exact path="/billing" component={Billing} />
+        <Route location={location} exact path="/dashboard" component={Dashboard} />
+        <Route location={location} exact path="/billing" component={Billing} />
         <Route location={location} exact path="/websites" component={Website} />
         <Route location={location} exact path="/inbox" component={Inbox} />
-        <UserRoute location={location} exact path="/favorites" component={Favorites} />
-        <UserRoute location={location} exact path="/customdomain" component={CustomDomain} />
-        <UserRoute location={location} exact path="/alerts" component={Alert} />
-        <UserRoute location={location} exact path="/logout" component={Logout} />
+        <Route location={location} exact path="/favorites" component={Favorites} />
+        <Route location={location} exact path="/customdomain" component={CustomDomain} />
+        <Route location={location} exact path="/alerts" component={Alert} />
+        <Route location={location} exact path="/logout" component={Logout} />
         <Route location={location} exact path="/dashboard/singlemail" component={Dashboard_singlemail} />
       </Layout>
     </Layout>
